@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel García</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Inicio -->
+    <header id="home">
+        <h1>Daniel Enrique García Gastélum</h1>
+        <p>Ingeniero en Software en formación</p>
+    </header>
+
+    <!-- Sobre mí -->
+    <section id="about">
+        <h2>Sobre mí</h2>
+        <p>Soy estudiante de ingeniería en software con un gran interés en el desarrollo de aplicaciones y soluciones tecnológicas.</p>
+        <p>He trabajado en varios proyectos personales utilizando tecnologías como HTML, CSS, JavaScript, y Java, así como C#.</p>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="projects">
+        <h2>Mis Proyectos</h2>
+        <div class="project">
+            <h3>Página web responsiva (Proyecto escolar)</h3>
+            <object type="text/html" data="https://dannyegg.github.io" width="100%" height="600px">
+                No se puede cargar la página.
+              </object>
+            <p>Se llevó a cabo una simulación de levantamiento de requerimientos del cliente, y se utilizó el modelo de desarrollo espiral; las tecnologías usadas fueron HTML, CSS y JavaScript.</p>
+            <a href="https://dannyegg.github.io" class="btn">Ir a la página</a>  
+        </div> 
+    </section>
+
+    <!-- Curriculum -->
+    <section id="Curriculum">
+        <h2>Mi Currículum</h2>
+        <iframe src="https://drive.google.com/file/d/1_Y_Qn9rUB1BJqVhxVp-RSgMZHNeRxnKQ/preview" width="100%" height="600px" ></iframe>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact">
+        <h2>Contacto</h2>
+        <a onclick="copiarContenido()" class="social-button">
+            <img src="https://img.icons8.com/color/480/gmail-new.png" alt="LinkedIn Logo">
+        </a>
+        <span id="msg">Correo copiado al portapapeles</span>
+        <a href="https://www.linkedin.com/in/deggisw/" target="_blank" class="social-button">
+            <img src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/>
+        </a>
+        <!--
+        <a href="https://www.linkedin.com/in/tu-perfil-linkedin" target="_blank" class="social-button">
+            <img src="https://img.icons8.com/ios-filled/50/github.png" alt="linkedin"/>
+        </a>
+        -->
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Daniel García. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        let texto = "dannyegarcia1303@gmail.com"
+        var msg = document.getElementById("msg");
+        const copiarContenido = async () => {
+          try {
+            await navigator.clipboard.writeText(texto);
+            console.log('Contenido copiado al portapapeles');
+            msg.className = "show";
+            setTimeout(()=>{ msg.className = msg.className.replace("show", ""); }, 3000);
+            
+          } catch (err) {
+            console.error('Error al copiar: ', err);
+            alert("Algo salió mal", err);
+          }
+        }
+      </script>
+</body>
+</html>
