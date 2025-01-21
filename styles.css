@@ -67,6 +67,7 @@ section .btn:hover {
 
 .container .column{
     width: 50%;
+    padding: 20px;
     
 }
 
