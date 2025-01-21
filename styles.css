@@ -21,21 +21,17 @@ header p {
     margin: 10px 0;
 }
 
-header .btn {
-    background-color: #ff6347;
-    padding: 5px 20px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
 section {
-    text-align: center;
     padding: 40px;
 }
 
 p {
     color: white;
+}
+
+#about{
+    text-align:  center;
+    width: 33%;
 }
 
 .project p {
@@ -47,15 +43,71 @@ section .btn{
     padding: 5px 20px;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 section .btn:hover {
     background-color: #05adc0;
 }
 
+#projects{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    max-width: 100%;
+}
+
+/*  */
+#technologies{
+    text-align: center;
+    width: 66%;
+}
+
+.container .column{
+    width: 50%;
+    
+}
+
+#technologies h2{
+    text-align: center;
+}
+
+.container-img {
+    display: flex;
+    width: 50px; 
+}
+
+.progress-container {
+    width: 75%;
+    position: relative;  
+    top: -36px;        
+    left: 50px;        
+    height: 24px;
+    background-color: #e0e0e0;
+    border-radius: 15px;  /* Bordes redondeados */
+    overflow: hidden;
+}
+
+    /* Barra de progreso */
+.progress-bar {
+    height: 100%;
+    background-color: #4caf50;  /* Color de la barra (puedes cambiarlo) */
+    border-radius: 15px;  /* Bordes redondeados */
+}
+
+/*  */
+section .habilidades{
+    background-color: #dbdddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 25%;
+}
+
 
 h2 {
+    text-align: center;
     color: #7ddfee;
 }
 
@@ -70,7 +122,16 @@ h2 {
     margin-top: 0;
 }
 
+#curriculum {
+    text-align: center;
+}
+
+#contact{
+    text-align: center;
+}
+
 .social-button {
+    
     display: inline-block;
     text-decoration: none;
     width: 50px; 
@@ -131,4 +192,26 @@ form input, form textarea {
     section {
         padding: 20px;
     }
+
+    .progress-container{
+        width: 50%/3;
+    }
+
+    .container{
+        flex-wrap: wrap;
+        flex-flow: column;
+    }
+
+    #about{
+        width: 100%;
+    }
+
+    #technologies{
+        width: 100%;
+    }
+
+    .column{
+        width: 100%*2;
+    }
+    
 }
